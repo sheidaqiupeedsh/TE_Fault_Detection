@@ -1,0 +1,17 @@
+TE data is multivariate time-series with labels that change over time
+
+bellow you will read the information on raw data of Tennessee Eastman Process:
+
+"User Agreement, Public Domain Dedication, and Disclaimer of Liability. By accessing or downloading the data or work provided here, you, the User, agree that you have read this agreement in full and agree to its terms. The person who owns, created, or contributed a work to the data or work provided here dedicated the work to the public domain and has waived his or her rights to the work worldwide under copyright law. You can copy, modify, distribute, and perform the work, for any lawful purpose, without asking permission. In no way are the patent or trademark rights of any person affected by this agreement, nor are the rights that any other person may have in the work or in how the work is used, such as publicity or privacy rights. Pacific Science & Engineering Group, Inc., its agents and assigns, make no warranties about the work and disclaim all liability for all uses of the work, to the fullest extent permitted by law. When you use or cite the work, you shall not imply endorsement by Pacific Science & Engineering Group, Inc., its agents or assigns, or by another author or affirmer of the work. This Agreement may be amended, and the use of the data or work shall be governed by the terms of the Agreement at the time that you access or download the data or work from this Website. Description This dataverse contains the data referenced in Rieth et al. (2017). Issues and Advances in Anomaly Detection Evaluation for Joint Human-Automated Systems. To be presented at Applied Human Factors and Ergonomics 2017. Each .RData file is an external representation of an R dataframe that can be read into an R environment with the 'load' function. The variables loaded are named ‘fault_free_training’, ‘fault_free_testing’, ‘faulty_testing’, and ‘faulty_training’, corresponding to the RData files. Each dataframe contains 55 columns: Column 1 ('faultNumber') ranges from 1 to 20 in the “Faulty” datasets and represents the fault type in the TEP. The “FaultFree” datasets only contain fault 0 (i.e. normal operating conditions). Column 2 ('simulationRun') ranges from 1 to 500 and represents a different random number generator state from which a full TEP dataset was generated (Note: the actual seeds used to generate training and testing datasets were non-overlapping). Column 3 ('sample') ranges either from 1 to 500 (“Training” datasets) or 1 to 960 (“Testing” datasets). The TEP variables (columns 4 to 55) were sampled every 3 minutes for a total duration of 25 hours and 48 hours respectively. Note that the faults were introduced 1 and 8 hours into the Faulty Training and Faulty Testing datasets, respectively. Columns 4 to 55 contain the process variables; the column names retain the original variable names. Acknowledgments. This work was sponsored by the Office of Naval Research, Human & Bioengineered Systems (ONR 341), program officer Dr. Jeffrey G. Morrison under contract N00014-15-C-5003. The views expressed are those of the authors and do not reflect the official policy or position of the Office of Naval Research, Department of Defense, or US Government. (2017-06-23)"
+
+The model we are going to train is "CNN_LSTM"
+
+Question we have to answer properly about the database:
+
+How many variables (sensors) do we have?
+What is the time resolution?
+How long is each simulation run?
+How are faults encoded?
+When does the fault start?
+
+What is ONE sample for the CNN-LSTM?
